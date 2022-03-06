@@ -10,8 +10,9 @@ public class LoginPage {
     private final SelenideElement passwordInput = Selenide.$("#password");
     private final SelenideElement loginButton = Selenide.$("#login-button");
 
-    public void open() {
+    public LoginPage open() {
         Selenide.open("https://www.saucedemo.com");
+        return this;
     }
 
     public void loginAs(String username, String password) {
