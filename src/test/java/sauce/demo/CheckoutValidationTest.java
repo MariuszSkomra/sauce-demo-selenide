@@ -6,7 +6,7 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CheckoutValidationTest {
+public class CheckoutValidationTest implements TextReportAbility {
 
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
     private final CheckoutYourInformationPage checkoutYourInformationPage =

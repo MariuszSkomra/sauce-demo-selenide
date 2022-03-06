@@ -9,7 +9,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class AddToCartTest {
+public class AddToCartTest implements TextReportAbility {
 
     private final List<String> itemsToAdd = List.of("Sauce Labs Onesie", "Sauce Labs Backpack");
     private final LoginPage loginPage = Selenide.page(LoginPage.class);

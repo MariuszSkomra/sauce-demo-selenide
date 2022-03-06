@@ -1,5 +1,6 @@
 package sauce.demo;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
@@ -12,7 +13,7 @@ public class CheckoutYourInformationPage {
     private final SelenideElement continueButton = Selenide.$("#continue");
 
     public void open() {
-        Selenide.open("https://www.saucedemo.com/checkout-step-one.html");
+        Selenide.open(Configuration.baseUrl + "/checkout-step-one.html");
     }
 
     public void fillFormAndSubmit(String firstName, String lastName, String postalCode) {

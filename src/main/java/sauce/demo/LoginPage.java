@@ -1,5 +1,6 @@
 package sauce.demo;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
@@ -11,7 +12,7 @@ public class LoginPage {
     private final SelenideElement loginButton = Selenide.$("#login-button");
 
     public LoginPage open() {
-        Selenide.open("https://www.saucedemo.com");
+        Selenide.open(Configuration.baseUrl);
         return this;
     }
 
