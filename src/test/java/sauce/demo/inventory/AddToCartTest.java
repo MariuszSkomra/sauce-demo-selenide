@@ -1,4 +1,4 @@
-package sauce.demo;
+package sauce.demo.inventory;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 
@@ -8,6 +8,11 @@ import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import sauce.demo.TextReportAbility;
+import sauce.demo.page.CartPage;
+import sauce.demo.page.checkout.CheckoutOverviewPage;
+import sauce.demo.page.InventoryPage;
+import sauce.demo.page.LoginPage;
 
 public class AddToCartTest implements TextReportAbility {
 

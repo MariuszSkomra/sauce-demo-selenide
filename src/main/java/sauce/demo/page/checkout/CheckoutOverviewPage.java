@@ -1,4 +1,4 @@
-package sauce.demo;
+package sauce.demo.page.checkout;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
