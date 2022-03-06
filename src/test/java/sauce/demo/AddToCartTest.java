@@ -39,11 +39,13 @@ public class AddToCartTest {
 
     @Test
     public void selectedItemsShouldBeInCheckoutOverview() {
+        // given
+        CheckoutOverviewPage checkoutOverviewPage = Selenide.page(CheckoutOverviewPage.class);
+
         // when
-        Selenide.open("https://www.saucedemo.com/checkout-step-two.html");
+        checkoutOverviewPage.open();
 
         // then
-        Selenide.page(CheckoutOverviewPage.class).inventoryItemNames
-                .shouldHave(exactTexts(itemsToAdd));
+        checkoutOverviewPage.inventoryItemNames.shouldHave(exactTexts(itemsToAdd));
     }
 }

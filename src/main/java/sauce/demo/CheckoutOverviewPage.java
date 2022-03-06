@@ -6,4 +6,8 @@ import com.codeborne.selenide.Selenide;
 public class CheckoutOverviewPage {
 
     public final ElementsCollection inventoryItemNames = Selenide.$$(".inventory_item_name");
+
+    public void open() {
+        Selenide.open("https://www.saucedemo.com/checkout-step-two.html");
+    }
 }
