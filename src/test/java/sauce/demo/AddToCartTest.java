@@ -5,6 +5,7 @@ import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import java.util.List;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,6 +22,11 @@ public class AddToCartTest {
                 .loginAs("standard_user", "secret_sauce");
 
         itemsToAdd.forEach(inventoryPage::selectItem);
+    }
+
+    @AfterEach
+    public void cleanup() {
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
