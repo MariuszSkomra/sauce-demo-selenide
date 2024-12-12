@@ -3,6 +3,9 @@ package sauce.demo.inventory;
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sauce.demo.TextReportAbility;
@@ -13,6 +16,12 @@ public class SortItemsTest implements TextReportAbility {
 
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
     private final InventoryPage inventoryPage = Selenide.page(InventoryPage.class);
+
+    @BeforeAll
+    public void s(){
+        SelenideLogger.addListener("Allure", new AllureSelenide());
+    }
+
 
     @BeforeEach
     public void setup() {

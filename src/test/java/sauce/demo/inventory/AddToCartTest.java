@@ -1,20 +1,22 @@
 package sauce.demo.inventory;
 
-import static com.codeborne.selenide.CollectionCondition.exactTexts;
-
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import sauce.demo.BaseTest;
 import sauce.demo.TextReportAbility;
 import sauce.demo.page.CartPage;
-import sauce.demo.page.checkout.CheckoutOverviewPage;
 import sauce.demo.page.InventoryPage;
 import sauce.demo.page.LoginPage;
+import sauce.demo.page.checkout.CheckoutOverviewPage;
 
-public class AddToCartTest implements TextReportAbility {
+import java.util.List;
+
+import static com.codeborne.selenide.CollectionCondition.exactTexts;
+
+public class AddToCartTest extends BaseTest implements TextReportAbility {
 
     private final List<String> itemsToAdd = List.of("Sauce Labs Onesie", "Sauce Labs Backpack");
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
