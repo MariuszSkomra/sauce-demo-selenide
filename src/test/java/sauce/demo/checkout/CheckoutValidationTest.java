@@ -4,13 +4,12 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sauce.demo.BaseTest;
-import sauce.demo.TextReportAbility;
 import sauce.demo.page.LoginPage;
 import sauce.demo.page.checkout.CheckoutYourInformationPage;
 
 import static com.codeborne.selenide.Condition.exactText;
 
-public class CheckoutValidationTest extends BaseTest implements TextReportAbility {
+public class CheckoutValidationTest extends BaseTest {
 
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
     private final CheckoutYourInformationPage checkoutYourInformationPage =

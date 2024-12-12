@@ -6,7 +6,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sauce.demo.BaseTest;
-import sauce.demo.TextReportAbility;
 import sauce.demo.page.CartPage;
 import sauce.demo.page.InventoryPage;
 import sauce.demo.page.LoginPage;
@@ -16,7 +15,7 @@ import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 
-public class AddToCartTest extends BaseTest implements TextReportAbility {
+public class AddToCartTest extends BaseTest {
 
     private final List<String> itemsToAdd = List.of("Sauce Labs Onesie", "Sauce Labs Backpack");
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
