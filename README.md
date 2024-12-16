@@ -24,7 +24,7 @@ or change `selenide.headless` property in `selenide.properties` to `false`.
 
 # How to generate Allure report
 
-Firstly - install Allure according to [documentation](https://allurereport.org/docs/install/).
+Install Allure according to [documentation](https://allurereport.org/docs/install/).
 
 To generate report:
 
