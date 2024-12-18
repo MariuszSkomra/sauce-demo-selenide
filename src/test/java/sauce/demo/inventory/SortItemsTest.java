@@ -1,15 +1,15 @@
 package sauce.demo.inventory;
 
-import static com.codeborne.selenide.CollectionCondition.exactTexts;
-
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sauce.demo.TextReportAbility;
+import sauce.demo.BaseTest;
 import sauce.demo.page.InventoryPage;
 import sauce.demo.page.LoginPage;
 
-public class SortItemsTest implements TextReportAbility {
+import static com.codeborne.selenide.CollectionCondition.exactTexts;
+
+public class SortItemsTest extends BaseTest {
 
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
     private final InventoryPage inventoryPage = Selenide.page(InventoryPage.class);

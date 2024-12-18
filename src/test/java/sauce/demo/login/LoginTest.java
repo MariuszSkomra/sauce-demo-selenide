@@ -1,16 +1,16 @@
 package sauce.demo.login;
 
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
-
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sauce.demo.TextReportAbility;
+import sauce.demo.BaseTest;
 import sauce.demo.page.InventoryPage;
 import sauce.demo.page.LoginPage;
 
-public class LoginTest implements TextReportAbility {
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.visible;
+
+public class LoginTest extends BaseTest {
 
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
     private final InventoryPage inventoryPage = Selenide.page(InventoryPage.class);

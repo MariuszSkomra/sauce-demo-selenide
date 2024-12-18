@@ -1,15 +1,15 @@
 package sauce.demo.checkout;
 
-import static com.codeborne.selenide.Condition.exactText;
-
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sauce.demo.TextReportAbility;
-import sauce.demo.page.checkout.CheckoutYourInformationPage;
+import sauce.demo.BaseTest;
 import sauce.demo.page.LoginPage;
+import sauce.demo.page.checkout.CheckoutYourInformationPage;
 
-public class CheckoutValidationTest implements TextReportAbility {
+import static com.codeborne.selenide.Condition.exactText;
+
+public class CheckoutValidationTest extends BaseTest {
 
     private final LoginPage loginPage = Selenide.page(LoginPage.class);
     private final CheckoutYourInformationPage checkoutYourInformationPage =
