@@ -6,15 +6,43 @@ on:
 jobs:
   run-all-tests:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
+
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
+
       - name: Run tests
         run: mvn test
+
+      - name: Checkout to gh-pages branch
+        uses: actions/checkout@v4
+        if: ${{ !cancelled() }}
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.11
+        if: ${{ !cancelled() }}
+        with:
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: allure-results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ ! cancelled() }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history

@@ -8,21 +8,21 @@ Tests are executed on Chrome browser in headless mode.
 
 # How to run tests
 
+## locally
+
 Use command:
 
 ```
 mvn test
 ```
 
-To disable headless mode use command:
+## on CI
 
-```
-mvn test -D"selenide.headless=false"
-```
-
-or change `selenide.headless` property in `selenide.properties` to `false`.
+Run `Run all tests` workflow.
 
 # How to generate Allure report
+
+## locally
 
 Install Allure according to [documentation](https://allurereport.org/docs/install/).
 
@@ -37,3 +37,7 @@ To open report:
 ```bash
 allure open
 ```
+
+## on CI
+
+HTML report is being published on GitHub Pages under [link](https://mariuszskomra.github.io/sauce-demo-selenide/).
